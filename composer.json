@@ -41,7 +41,7 @@
     "extra": {
         "contao-manager-plugin": "Chibko\\Contao\\Tarteaucitron\\ContaoManager\\Plugin",
         "installer-paths": {
-            "src/Resources/public/{$name}": ["amauric/tarteaucitron.js"]
+            "./vendor/chibko/contao-tarteaucitron/src/Resources/public/{$name}": ["amauric/tarteaucitron.js"]
         }
     }
 }
