@@ -1,2 +1,2 @@
-# Fontawesome 5 for Contao
-Provides a checkbox in the page layout to add fontawesome support
+# tarteaucitron.js 5 for Contao
+Comply to the european cookie law is simple with the french tarte au citron.
