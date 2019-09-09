@@ -1,5 +1,7 @@
 <?php
 
+use \Contao\CoreBundle\DataContainer\PaletteManipulator;
+
 // Add palettes selector
 $GLOBALS['TL_DCA']['tl_page']['palettes']['__selector__'][] = 'cookiecitron_enable';
 $GLOBALS['TL_DCA']['tl_page']['subpalettes']['cookiecitron_enable'] = 'url_privacy,cookiecitron_adblocker,cookiecitron_showAlertSmall,cookiecitron_cookieslist,cookiecitron_removeCredit,cookiecitron_position,cookiecitron_placement,cookiecitron_highPrivacy,cookiecitron_combineAssets';
