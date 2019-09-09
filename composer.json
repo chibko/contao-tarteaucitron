@@ -14,7 +14,7 @@
     "require": {
         "php": "^7.1",
         "contao/core-bundle": "^4.4",
-        "amauric/tarteaucitron.js": "^1.2"
+        "AmauriC/tarteaucitron.js": "^1.2"
     },
     "require-dev": {
         "contao/manager-plugin": "^2.0"
@@ -22,7 +22,7 @@
     "repositories": [{
         "type": "package",
         "package": {
-            "name": "amauric/tarteaucitron.js",
+            "name": "AmauriC/tarteaucitron.js",
             "version": "1.2",
             "dist": {
                 "url": "https://github.com/AmauriC/tarteaucitron.js/archive/V1.2.zip",
