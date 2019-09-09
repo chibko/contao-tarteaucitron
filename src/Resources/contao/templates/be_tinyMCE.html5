@@ -1,0 +1,115 @@
+<?php
+
+namespace Contao;
+
+if ($GLOBALS['TL_CONFIG']['useRTE']):
+
+    ?>
+    <script>window.tinymce || document.write('<script src="<?= TL_ASSETS_URL ?>assets/tinymce4/js/tinymce.min.js">\x3C/script>')</script>
+    <script>
+        setTimeout(function () {
+            window.tinymce && tinymce.init({
+                skin: 'contao',
+                selector: '#<?= $this->selector ?>',
+                language: '<?= Backend::getTinyMceLanguage() ?>',
+                element_format: 'html',
+                document_base_url: '<?= Environment::get('base') ?>',
+                entities: '160,nbsp,60,lt,62,gt,173,shy',
+                paste_as_text: true,
+                branding: false,
+                setup: function (editor) {
+                    editor.getElement().removeAttribute('required');
+                },
+                init_instance_callback: function (editor) {
+                    if (document.activeElement && document.activeElement.id && document.activeElement.id == editor.id) {
+                        editor.editorManager.get(editor.id).focus();
+                    }
+                    editor.on('focus', function () {
+                        Backend.getScrollOffset();
+                    });
+                },
+                file_browser_callback: function (field_name, url, type, win) {
+                    Backend.openModalBrowser(field_name, url, type, win);
+                },
+                file_browser_callback_types: <?= json_encode($this->fileBrowserTypes) ?>,
+                plugins: 'autosave charmap code fullscreen image link lists paste searchreplace stripnbsp tabfocus table visualblocks ',
+                browser_spellcheck: true,
+                tabfocus_elements: ':prev,:next',
+                //importcss_append: true,
+                style_formats: [
+                    {
+                        title: "Headers", items: [
+                            {title: "Header 1", format: "h1"},
+                            {title: "Header 2", format: "h2"},
+                            {title: "Header 3", format: "h3"},
+                            {title: "Header 4", format: "h4"},
+                            {title: "Header 5", format: "h5"},
+                            {title: "Header 6", format: "h6"}
+                        ]
+                    },
+                    {
+                        title: "Inline", items: [
+                            {title: "Bold", icon: "bold", format: "bold"},
+                            {title: "Italic", icon: "italic", format: "italic"},
+                            {title: "Underline", icon: "underline", format: "underline"},
+                            {title: "Strikethrough", icon: "strikethrough", format: "strikethrough"},
+                            {title: "Superscript", icon: "superscript", format: "superscript"},
+                            {title: "Subscript", icon: "subscript", format: "subscript"},
+                            {title: 'Text primary', inline: 'span', 'classes': 'text-primary'},
+                            {title: 'Text secondary', inline: 'span', 'classes': 'text-secondary'},
+                            {title: 'Text small', inline: 'span', 'classes': 'small'},
+                            {title: 'Button primary', selector: 'a,span,button', 'classes': 'btn btn-primary'},
+                            {title: 'Button secondary', selector: 'a,span,button', 'classes': 'btn btn-secondary'},
+                            {title: "Code", icon: "code", format: "code"}
+                        ]
+                    },
+                    {
+                        title: "Icons", items: [
+                            {title: 'fa-lg', selector: 'span', 'classes': 'fa-lg'},
+                            {title: 'fa-2x', selector: 'span', 'classes': 'fa-2x'},
+                            {title: 'fa-3x', selector: 'span', 'classes': 'fa-3x'},
+                            {title: 'fa-fw', selector: 'span', 'classes': 'fa-faw'}
+                        ]
+                    },
+                    {
+                        title: "Blocks", items: [
+                            {title: "Paragraph", format: "p"},
+                            {title: "Blockquote", format: "blockquote"},
+                            {title: "Div", format: "div"},
+                            {title: "Pre", format: "pre"},
+                            {title: 'Text small', block: 'p', 'classes': 'small'},
+
+                        ]
+                    },
+                    {
+                        title: "Alignment", items: [
+                            {title: "Left", icon: "alignleft", format: "alignleft"},
+                            {title: "Center", icon: "aligncenter", format: "aligncenter"},
+                            {title: "Right", icon: "alignright", format: "alignright"},
+                            {title: "Justify", icon: "alignjustify", format: "alignjustify"}
+                        ]
+                    }
+                ],
+                content_css: "<?php echo TL_PATH; ?>/system/themes/tinymce.css",
+
+                extended_valid_elements: ''
+                    + 'q[cite|class|title],article,section,hgroup,figure,figcaption'
+                    + "h1[*],"
+                    + "h2[*],"
+                    + "h3[*],"
+                    + "h4[*],"
+                    + "h5[*],"
+                    + "h6[*],"
+                    + "p[*],"
+                    + "div[*],"
+                    + "ul[*],"
+                    + "li[*],"
+                    + "a[*],"
+                    + "span[*],"
+                    + "i[*],",
+                menubar: 'file edit insert view format table',
+                toolbar: 'link unlink | bold italic subscript superscript | styleselect | alignleft aligncenter alignright alignjustify | bullist numlist | undo redo | code'
+            });
+        }, 0);
+    </script>
+<?php endif; ?>

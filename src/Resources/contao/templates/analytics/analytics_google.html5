@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * To use this script, please fill in your Google Analytics ID below
+ */
+$GoogleAnalyticsId = 'UA-XXXXX-X';
+
+
+/**
+ * DO NOT EDIT ANYTHING BELOW THIS LINE UNLESS YOU KNOW WHAT YOU ARE DOING!
+ */
+if ($GoogleAnalyticsId != 'UA-XXXXX-X' && !BE_USER_LOGGED_IN && sha1(session_id() . (!Config::get('disableIpCheck') ? Environment::get('ip') : '') . 'BE_USER_AUTH') != Input::cookie('BE_USER_AUTH')): ?>
+
+<script type="text/javascript">
+	tarteaucitron.user.gtagUa = '<?=$GoogleAnalyticsId?>';
+    tarteaucitron.user.gtagMore = function () {
+	     <?php if (Config::get('privacyAnonymizeGA')): ?>
+                gtag('config', '<?=$GoogleAnalyticsId?>', { 'anonymize_ip': true });
+            <?php endif; ?>
+	     };
+    	(tarteaucitron.job = tarteaucitron.job || []).push('gtag');
+</script>
+
+<?php endif; ?>
+
+
+
+

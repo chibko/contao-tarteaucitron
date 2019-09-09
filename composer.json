@@ -1,0 +1,47 @@
+{
+    "name": "chibko/contao-tarteaucitron",
+    "description": "Add tarteaucitron.js to Contao. Cookies consent",
+    "keywords": ["contao", "tarteaucitron"],
+    "authors": [
+        {
+            "name": "Chibko Stéphane",
+            "homepage": "http://www.chibko.com"
+        }
+    ],
+    "type": "contao-bundle",
+    "license": "LGPL-3.0-or-later",
+    "homepage": "https://chibko.com/",
+    "require": {
+        "php": "^7.1",
+        "contao/core-bundle": "^4.4",
+        "amauric/tarteaucitronjs": "^1.2"
+    },
+    "require-dev": {
+        "contao/manager-plugin": "^2.0"
+    },
+    "repositories": [{
+        "type": "package",
+        "package": {
+            "name": "amauric/tarteaucitronjs",
+            "version": "1.2",
+            "dist": {
+                "url": "https://github.com/AmauriC/tarteaucitron.js/archive/V1.2.zip",
+                "type": "zip"
+            }
+        }
+    }],
+    "conflict": {
+        "contao/manager-plugin": "<2.0 || >=3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Chibko\\Contao\\Tarteaucitron\\": "src/"
+        }
+    },
+    "extra": {
+        "contao-manager-plugin": "Chibko\\Contao\\Tarteaucitron\\ContaoManager\\Plugin",
+        "installer-paths": {
+            "src/Resources/public/{$name}": ["amauric/tarteaucitronjs"]
+        }
+    }
+}
