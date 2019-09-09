@@ -16,13 +16,14 @@ class CookieCitron extends \Frontend
 		if ($this->isCookieCitronEnabled())
 		{
             $flag = '';
-
+            $rootDir = \System::getContainer()->getParameter('kernel.project_dir');
             // Combine the assets
             if ($this->getCurrentRootPage()->cookiecitron_combineAssets) {
                 $flag = '|static';
             }
 			$GLOBALS['TL_CSS'][] = 'system/modules/xCookiesCitron/assets/css/tarteaucitron.css|all'.$flag;
-            $GLOBALS['TL_HEAD'][]='<script src="'.TL_ASSETS_URL.'system/modules/xCookiesCitron/assets/tarteaucitron.js"></script>';
+            //$GLOBALS['TL_HEAD'][]='<script src="'.TL_ASSETS_URL.'system/modules/xCookiesCitron/assets/tarteaucitron.js"></script>';
+            $GLOBALS['TL_HEAD'][]=\Template::generateScriptTag($rootDir.'/vendor/chibko/contao/tarteaucitron/src/Resources/public/tarteaucitron.js');
 		}
 	}
 

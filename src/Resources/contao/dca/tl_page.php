@@ -1,28 +1,14 @@
 <?php
 
-/**
- * cookiebar extension for Contao Open Source CMS
- *
- * Copyright (C) 2013 Codefog
- *
- * @package cookiebar
- * @author  Codefog <http://codefog.pl>
- * @author  Kamil Kuzminski <kamil.kuzminski@codefog.pl>
- * @license LGPL
- */
-
-
-/**
- * Extend the tl_page palettes
- */
+// Add palettes selector
 $GLOBALS['TL_DCA']['tl_page']['palettes']['__selector__'][] = 'cookiecitron_enable';
-$GLOBALS['TL_DCA']['tl_page']['palettes']['root'].= ';{cookiecitron_legend},cookiecitron_enable';
-
-
-/**
- * Add the tl_page subpalette
- */
 $GLOBALS['TL_DCA']['tl_page']['subpalettes']['cookiecitron_enable'] = 'url_privacy,cookiecitron_adblocker,cookiecitron_showAlertSmall,cookiecitron_cookieslist,cookiecitron_removeCredit,cookiecitron_position,cookiecitron_placement,cookiecitron_highPrivacy,cookiecitron_combineAssets';
+
+PaletteManipulator::create()
+    ->addLegend('cookiecitron_legend', '', PaletteManipulator::POSITION_AFTER)
+    ->addField('cookiecitron_enable', 'cookiecitron_legend', PaletteManipulator::POSITION_AFTER)
+    ->applyToPalette('root', 'tl_page');
+//$GLOBALS['TL_DCA']['tl_page']['palettes']['root'].= ';{cookiecitron_legend},cookiecitron_enable';
 
 /**
  * Add the fields to tl_page
@@ -130,5 +116,3 @@ $GLOBALS['TL_DCA']['tl_page']['fields']['cookiecitron_combineAssets'] = array
     'eval'                    => array('tl_class'=>'long clr'),
     'sql'                     => "char(1) NOT NULL default ''"
 );
-
-
