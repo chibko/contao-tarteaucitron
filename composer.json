@@ -25,8 +25,8 @@
             "name": "AmauriC/tarteaucitron.js",
             "version": "1.2",
             "dist": {
-                "url": "https://github.com/AmauriC/tarteaucitron.js/archive/V1.2.zip",
-                "type": "zip"
+                "url": "https://github.com/AmauriC/tarteaucitron.js.git",
+                "type": "git"
             }
         }
     }],
