@@ -53,8 +53,8 @@ class CookieCitron extends \Frontend
             $objTemplate->position = $objRoot->cookiecitron_position;
             $objTemplate->language = $objRoot->language;
 
-            if (($objRoot->url_privacy)) :
-                $pagePrivacy = \PageModel::findWithDetails($objRoot->url_privacy);
+            if (!empty($objRoot->cookiecitron_url_privacy)) :
+                $pagePrivacy = \PageModel::findWithDetails($objRoot->cookiecitron_url_privacy);
                 if ($pagePrivacy!==null) {
                     $urlPrivacy = $pagePrivacy->getFrontendUrl();
                 }
