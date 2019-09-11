@@ -1,0 +1,14 @@
+<?php
+/**
+ * To use this script, please fill in your Google Tag Manager ID below
+ */
+$GoogleTagManagerId = 'GTM-XXXX';
+/**
+ * DO NOT EDIT ANYTHING BELOW THIS LINE UNLESS YOU KNOW WHAT YOU ARE DOING!
+ */
+if ($GoogleTagManagerId != 'UA-XXXXX-X' && !BE_USER_LOGGED_IN && !$this->hasAuthenticatedBackendUser()): ?>
+    <script type="text/javascript">
+        tarteaucitron.user.googletagmanagerId = '<?=$GoogleTagManagerId?>';
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');
+    </script>
+<?php endif; ?>
