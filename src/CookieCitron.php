@@ -39,6 +39,7 @@ class CookieCitron extends \Frontend
      */
     public function addCookieCitronBuffer($strContent,$strTemplate)
     {
+
         if ($this->isCookieCitronEnabled()) {
             $objRoot = $this->getCurrentRootPage();
             $objTemplate = new \FrontendTemplate('cookiecitron_default');
@@ -86,9 +87,10 @@ class CookieCitron extends \Frontend
      */
     protected function isCookieCitronEnabled(\PageModel $rootPage = null)
     {
+        global $objPage;
         $objRoot = ($rootPage !== null) ? $rootPage : $this->getCurrentRootPage();
 
-        if ($objRoot->cookiecitron_enable) {
+        if ($objRoot->cookiecitron_enable &&  && !$objPage->cookiecitron_remove) {
             $arrServices = deserialize($objRoot->cookiecitron_services, true);
             if (!empty($arrServices)) {
                 return true;

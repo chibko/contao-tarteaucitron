@@ -4,6 +4,7 @@
  * Fields
  */
 $GLOBALS['TL_LANG']['tl_page']['cookiecitron_enable'] = ['Enable cookie bar','Display the cookie information bar on the website.'];
+$GLOBALS['TL_LANG']['tl_page']['cookiecitron_remove'] = ['Remove tarteaucitron.js script','Remove tarteaucitron.js script for this page.'];
 $GLOBALS['TL_LANG']['tl_page']['cookiecitron_highPrivacy'] = ['Disable implied consent','Disable implied consent (while browsing)'];
 $GLOBALS['TL_LANG']['tl_page']['cookiecitron_url_privacy'] = ['Privacy page','Choose the page describing the privacy policy'];
 $GLOBALS['TL_LANG']['tl_page']['cookiecitron_AcceptAllCta'] = ['Button "Accept all"','Check this box to display the "Accept All" button'];
@@ -14,6 +15,7 @@ $GLOBALS['TL_LANG']['tl_page']['cookiecitron_showAlertSmall'] = ['Bottom banner'
 $GLOBALS['TL_LANG']['tl_page']['cookiecitron_position'] = ['Bar position', 'Here you can choose the bar position.'];
 $GLOBALS['TL_LANG']['tl_page']['cookiecitron_placement'] = ['Bar placement in DOM','Here you can choose the bar placement in DOM structure.'];
 $GLOBALS['TL_LANG']['tl_page']['cookiecitron_combineAssets'] = ['Combine assets','Adds the cookiebar CSS and JS assets to the combined file.'];
+$GLOBALS['TL_LANG']['tl_page']['cookiecitron_services']=['Services', 'Choose services'];
 
 /**
  * Legends

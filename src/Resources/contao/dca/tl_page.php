@@ -13,6 +13,10 @@ PaletteManipulator::create()
     ->addField('cookiecitron_enable', 'cookiecitron_legend', PaletteManipulator::POSITION_AFTER)
     ->applyToPalette('root', 'tl_page');
 
+PaletteManipulator::create()
+    ->addLegend('cookiecitron_legend', '', PaletteManipulator::POSITION_AFTER)
+    ->addField('cookiecitron_remove', 'cookiecitron_legend', PaletteManipulator::POSITION_AFTER)
+    ->applyToPalette('default', 'tl_page');
 
 $GLOBALS['TL_DCA']['tl_page']['fields']['cookiecitron_enable'] = array
 (
@@ -20,6 +24,14 @@ $GLOBALS['TL_DCA']['tl_page']['fields']['cookiecitron_enable'] = array
     'exclude' => true,
     'inputType' => 'checkbox',
     'eval' => array('submitOnChange' => true, 'tl_class' => 'long'),
+    'sql' => "char(1) NOT NULL default ''"
+);
+
+$GLOBALS['TL_DCA']['tl_page']['fields']['cookiecitron_remove'] = array
+(
+    'label' => &$GLOBALS['TL_LANG']['tl_page']['cookiecitron_remove'],
+    'exclude' => true,
+    'inputType' => 'checkbox',
     'sql' => "char(1) NOT NULL default ''"
 );
 

@@ -3,7 +3,8 @@
 /**
  * Fields
  */
-$GLOBALS['TL_LANG']['tl_page']['cookiecitron_enable'] = ['Activer le script Tarte au Citron','Affiche les informations cookies sur le site'];
+$GLOBALS['TL_LANG']['tl_page']['cookiecitron_enable'] = ['Activer le script tarteaucitron.js','Affiche les informations cookies sur le site'];
+$GLOBALS['TL_LANG']['tl_page']['cookiecitron_remove'] = ['Désactiver le script tarteaucitron.js','Désactive le script tarteaucitron.js sur cette page.'];
 $GLOBALS['TL_LANG']['tl_page']['cookiecitron_highPrivacy'] = ['Désactiver le consentement implicite','Désactiver le consentement implicite (en naviguant)'];
 $GLOBALS['TL_LANG']['tl_page']['cookiecitron_url_privacy'] = ['Page Confidentialité','Choisir la page décrivant la politique de confidentialité'];
 $GLOBALS['TL_LANG']['tl_page']['cookiecitron_AcceptAllCta'] = ['Bouton "Tout accepter"','Cochez cette case pour afficher le bouton "Tout accepter"'];
@@ -14,11 +15,12 @@ $GLOBALS['TL_LANG']['tl_page']['cookiecitron_showAlertSmall'] = ['Bandeau bas','
 $GLOBALS['TL_LANG']['tl_page']['cookiecitron_position'] = ['Position de la barre', 'Choisissez où afficher la barre : Haut ou bas'];
 $GLOBALS['TL_LANG']['tl_page']['cookiecitron_placement'] = ['Placement du code dans le DOM','Choisissez le placement du code dans la structure du DOM.'];
 $GLOBALS['TL_LANG']['tl_page']['cookiecitron_combineAssets'] = ['Combiner les CSS','Combine et compresse la feuille de style tarteaucitron.css avec les autres CSS.'];
+$GLOBALS['TL_LANG']['tl_page']['cookiecitron_services']=['Services', 'Choisir les services'];
 
 /**
  * Legends
  */
-$GLOBALS['TL_LANG']['tl_page']['cookiecitron_legend'] = 'Informations sur les cookies';
+$GLOBALS['TL_LANG']['tl_page']['cookiecitron_legend'] = 'Confidentialité / Cookies';
 
 /**
  * Reference
