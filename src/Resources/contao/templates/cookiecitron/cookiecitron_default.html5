@@ -1,17 +1,26 @@
 <script type="text/javascript">
-        var tarteaucitronForceLanguage = '<?php echo $this->language; ?>';
-        tarteaucitron.init({
-	        <?php if ($this->url_privacy!="") :?>
-            "privacyUrl": "<?= $this->url_privacy ?>",
-            <?php endif; ?>
-            "hashtag": "#tarteaucitron", /* Ouverture automatique du panel avec le hashtag */
-            "AcceptAllCta" : true, 
-            "highPrivacy": <?= $this->highPrivacy ?>, /* désactiver le consentement implicite (en naviguant) ? */
-            "orientation": "<?= $this->position; ?>", /* le bandeau doit être en haut (top) ou en bas (bottom) ? */
-            "adblocker": <?= $this->adblocker ?>, /* Afficher un message si un adblocker est détecté */
-            "showAlertSmall": <?= $this->showAlertSmall ?>, /* afficher le petit bandeau en bas à droite ? */
-            "cookieslist": <?= $this->cookieslist ?>, /* Afficher la liste des cookies installés ? */
-            "removeCredit": <?= $this->removeCredit ?>, /* supprimer le lien vers la source ? */
-        });
-</script>
+    var tarteaucitronForceLanguage = '<?php echo $this->language; ?>';
+    tarteaucitron.init({
+        <?php if ($this->url_privacy != "") :?>
+        "privacyUrl": "<?= $this->url_privacy; ?>", /* Privacy policy url */
+        <?php endif; ?>
 
+        "hashtag": "#tarteaucitron", /* Open the panel with this hashtag */
+        "cookieName": "tarteaucitron", /* Cookie name */
+
+        "orientation": "<?= $this->position; ?>", /* Banner position (top - bottom) */
+        "showAlertSmall": <?= $this->showAlertSmall ?>, /* Show the small banner on bottom right */
+        "cookieslist": <?= $this->cookieslist ?>, /* Show the cookie list */
+
+        "adblocker": <?= $this->adblocker ?>, /* Show a Warning if an adblocker is detected */
+        "AcceptAllCta": <?= $this->AcceptAllCta ?>, /* Show the accept all button when highPrivacy on */
+        "highPrivacy": <?= $this->highPrivacy ?>, /* Disable auto consent */
+
+        "removeCredit": <?= $this->removeCredit ?>, /* Remove credit link */
+        "moreInfoLink": false, /* Show more info link */
+        "useExternalCss": false, /* If false, the tarteaucitron.css file will be loaded */
+
+        //"cookieDomain": ".my-multisite-domaine.fr", /* Shared cookie for multisite */
+        //"readmoreLink": "cookiespolicy" /* Change the default readmore link */
+    });
+</script>
