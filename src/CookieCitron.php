@@ -73,7 +73,7 @@ class CookieCitron extends \Frontend
                 $serviceTemplate = new \FrontendTemplate($service);
                 $strServices.="\n".$serviceTemplate->parse();
             endforeach;
-            $strContent = str_replace('</body>', $strServices . '</body>', $strContent)
+            $strContent = str_replace('</body>', $strServices . '</body>', $strContent);
         }
 
         return $strContent;
