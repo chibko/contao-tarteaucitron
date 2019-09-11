@@ -8,6 +8,7 @@ class CookieCitron extends \Frontend
 {
     /**
      * Add the cookie information scripts
+     * @param \PageModel $objPage, \layoutModel $objLayout, \PageRegular $objPageRegular
      */
     public function addCookieCitronScripts($objPage, $objLayout, $objPageRegular)
     {
