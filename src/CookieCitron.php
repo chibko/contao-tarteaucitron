@@ -15,30 +15,19 @@ class CookieCitron extends \Frontend
             $objRoot = $this->getCurrentRootPage();
             $flag = '';
             $assetsDir = 'bundles/chibkocontaotarteaucitron/';
-            $rootDir = \System::getContainer()->getParameter('kernel.project_dir');
 
+            // Add the CSS
             if ($objRoot->cookiecitron_combineAssets) {
                 $flag = '|static';
             }
-            // Add the CSS
             if ($objLayout->bootstrap) {
                 $GLOBALS['TL_CSS_END'][] = $assetsDir . 'css/tarteaucitron.css|all' . $flag;
             } else {
                 $GLOBALS['TL_CSS'][] = $assetsDir . 'css/tarteaucitron.css|all' . $flag;
             }
-            // Minify the JS if needed
-            $sourcePath = $rootDir.'/vendor/chibko/contao-tarteaucitron/src/Resources/public/tarteaucitron.js';
-            $minFileStr='tarteaucitron.min.js';
-            $minPath = 'vendor/chibko/contao-tarteaucitron/src/Resources/public/'.$minFileStr;
 
-            $minFile = new \File($minPath);
-            if (!$minFile->exists()) {
-                $minifier = new JS($sourcePath);
-                $minFile->write($minifier->minify());
-                $minFile->close();
-            }
             // Add the JS to the Head Section
-            $GLOBALS['TL_HEAD'][] = \Template::generateScriptTag($assetsDir.$minFileStr);
+            $GLOBALS['TL_HEAD'][] = \Template::generateScriptTag($assetsDir.'tarteaucitron.min.js');
         }
     }
 
