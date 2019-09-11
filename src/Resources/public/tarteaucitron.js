@@ -1,5 +1,6 @@
 /*jslint browser: true, evil: true */
 
+
 // define correct path for files inclusion
 var scripts = document.getElementsByTagName('script'),
     path = scripts[scripts.length - 1].src.split('?')[0],
@@ -12,7 +13,6 @@ var scripts = document.getElementsByTagName('script'),
     timeExipre = 31536000000,
     tarteaucitronProLoadServices,
     tarteaucitronNoAdBlocker = false;
-
 
 
 var tarteaucitron = {
@@ -204,7 +204,7 @@ var tarteaucitron = {
         var cdn = tarteaucitron.cdn,
             language = tarteaucitron.getLanguage(),
             pathToLang = cdn + 'lang/tarteaucitron.' + language + '.js?v=' + tarteaucitron.version,
-            pathToServices = cdn + 'tarteaucitron.services.js?v=' + tarteaucitron.version,
+            pathToServices = cdn + 'tarteaucitron.services.min.js?v=' + tarteaucitron.version,
             linkElement = document.createElement('link'),
             defaults = {
                 "adblocker": false,
