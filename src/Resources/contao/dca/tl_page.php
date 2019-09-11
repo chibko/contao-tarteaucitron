@@ -16,7 +16,7 @@ PaletteManipulator::create()
 PaletteManipulator::create()
     ->addLegend('cookiecitron_legend', '', PaletteManipulator::POSITION_AFTER)
     ->addField('cookiecitron_remove', 'cookiecitron_legend', PaletteManipulator::POSITION_AFTER)
-    ->applyToPalette('default', 'tl_page');
+    ->applyToPalette('regular', 'tl_page');
 
 $GLOBALS['TL_DCA']['tl_page']['fields']['cookiecitron_enable'] = array
 (
