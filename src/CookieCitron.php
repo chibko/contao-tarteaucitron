@@ -90,7 +90,7 @@ class CookieCitron extends \Frontend
         global $objPage;
         $objRoot = ($rootPage !== null) ? $rootPage : $this->getCurrentRootPage();
 
-        if ($objRoot->cookiecitron_enable &&  && !$objPage->cookiecitron_remove) {
+        if ($objRoot->cookiecitron_enable &&  !$objPage->cookiecitron_remove) {
             $arrServices = deserialize($objRoot->cookiecitron_services, true);
             if (!empty($arrServices)) {
                 return true;
