@@ -789,3 +789,115 @@ body #tarteaucitronRoot div#tarteaucitronAlertBig {
     text-align: center;
     font-size: 21px;
 }
+div#tarteaucitronAlertBig {
+    box-sizing: border-box!important;
+}
+#tarteaucitron #tarteaucitronServices .tarteaucitronMainLine .tarteaucitronName a,
+#tarteaucitron #tarteaucitronServices .tarteaucitronTitle a {
+    color: #222222 !important
+}
+#tarteaucitronAlertSmall #tarteaucitronCookiesListContainer #tarteaucitronCookiesList .tarteaucitronCookiesListMain:hover,
+#tarteaucitron #tarteaucitronServices .tarteaucitronLine:hover {
+    background: rgba(245, 245, 245, 0.2) !important;
+}
+#tarteaucitron #tarteaucitronServices .tarteaucitronHidden,
+#tarteaucitronAlertSmall #tarteaucitronCookiesListContainer #tarteaucitronCookiesList .tarteaucitronHidden {
+    background: rgba(245, 245, 245, 0.07) !important
+}
+#tarteaucitron .tarteaucitronBorder,
+#tarteaucitronAlertSmall #tarteaucitronCookiesListContainer #tarteaucitronCookiesList .tarteaucitronCookiesListMain,
+#tarteaucitronAlertSmall #tarteaucitronCookiesListContainer #tarteaucitronCookiesList,
+#tarteaucitronAlertSmall #tarteaucitronCookiesListContainer #tarteaucitronCookiesList .tarteaucitronHidden,
+#tarteaucitron #tarteaucitronServices .tarteaucitronMainLine {
+    border-color:#f5f5f5 !important
+}
+#tarteaucitronAlertSmall #tarteaucitronCookiesListContainer #tarteaucitronCookiesList .tarteaucitronCookiesListMain,
+#tarteaucitron #tarteaucitronServices .tarteaucitronLine {
+    background: rgba(245, 245, 245, 0.1) !important
+}
+#tarteaucitron #tarteaucitronServices .tarteaucitronMainLine .tarteaucitronName b,
+#tarteaucitronAlertBig #tarteaucitronDisclaimerAlert b,
+#tarteaucitronAlertSmall #tarteaucitronCookiesNumber,
+#tarteaucitronAlertSmall #tarteaucitronManager,
+#tarteaucitronAlertSmall #tarteaucitronCookiesListContainer #tarteaucitronCookiesTitle b,
+#tarteaucitron #tarteaucitronInfo a,
+#tarteaucitron .tarteaucitronH1,
+#tarteaucitron .tarteaucitronName tarteaucitronH2,
+#tarteaucitronAlertBig #tarteaucitronDisclaimerAlert strong,
+#tarteaucitron .tarteaucitronTitle button {
+    color:#222222 !important
+}
+#tarteaucitron #tarteaucitronServices .tarteaucitronMainLine,
+#tarteaucitronAlertBig,
+#tarteaucitronAlertBig #tarteaucitronDisclaimerAlert,
+#tarteaucitronAlertSmall,
+.tac_activate,
+.tac_activate .tac_float,
+.tac_activate .tac_float b,
+#tarteaucitron #tarteaucitronClosePanel,
+#tarteaucitronAlertSmall #tarteaucitronCookiesListContainer #tarteaucitronClosePanelCookie,
+#tarteaucitronAlertSmall #tarteaucitronCookiesListContainer #tarteaucitronCookiesTitle,
+#tarteaucitronAlertSmall #tarteaucitronCookiesListContainer #tarteaucitronCookiesTitle:hover,
+#tarteaucitron #tarteaucitronInfo,
+#tarteaucitron #tarteaucitronServices .tarteaucitronDetails,
+#tarteaucitron #tarteaucitronServices .tarteaucitronTitle,
+#tarteaucitronAlertSmall #tarteaucitronCookiesListContainer #tarteaucitronCookiesList .tarteaucitronTitle,
+#tarteaucitron #tarteaucitronServices .tarteaucitronMainLine:hover,
+div#tarteaucitronServices,
+#tarteaucitron #tarteaucitronServices .tarteaucitronTitle button {
+    background: #f5f5f5 !important;
+    color:#222222 !important
+}
+#tarteaucitronAlertBig #tarteaucitronCloseAlert {
+    color: #f5f5f5 !important;
+    background:#222222 !important
+}
+html body #tarteaucitronRoot #tarteaucitronAlertBig,
+html body #tarteaucitronRoot span#tarteaucitronDisclaimerAlert {
+    background-color:#fcfcfc!important
+}
+html body #tarteaucitronRoot #tarteaucitronAlertBig span {
+    color:#424242!important
+}
+html body #tarteaucitronRoot #tarteaucitronPersonalize {
+    background-color:#20b309!important
+}
+html body #tarteaucitronRoot #tarteaucitronPersonalize {
+    color:#fff!important
+}
+html body #tarteaucitronRoot #tarteaucitronPrivacyUrl {
+    background-color:#f5f5f5!important
+}
+html body #tarteaucitronRoot #tarteaucitronPrivacyUrl {
+    color:#333!important
+}
+html body #tarteaucitronRoot #tarteaucitronCloseAlert {
+    background-color:#ffffff!important
+}
+html body #tarteaucitronRoot #tarteaucitronCloseAlert {
+    color:#333333!important
+}
+html body #tarteaucitronRoot button.tarteaucitronAllow {
+    background-color:#20b309!important
+}
+html body #tarteaucitronRoot button.tarteaucitronAllow {
+    color:#fff!important
+}
+html body #tarteaucitronRoot li.tarteaucitronLine.tarteaucitronIsAllowed {
+    border-color:#20b309!important
+}
+html body #tarteaucitronRoot #tarteaucitronDotGreen {
+    background-color:#20b309!important
+}
+html body #tarteaucitronRoot button.tarteaucitronDeny {
+    background-color:#b3240b!important
+}
+html body #tarteaucitronRoot button.tarteaucitronDeny {
+    color:#fff!important
+}
+html body #tarteaucitronRoot li.tarteaucitronLine.tarteaucitronIsDenied {
+    border-color:#b3240b!important
+}
+html body #tarteaucitronRoot #tarteaucitronDotRed {
+    background-color:#b3240b!important
+}
