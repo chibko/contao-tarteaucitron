@@ -205,7 +205,7 @@ var tarteaucitron = {
         "use strict";
         var cdn = tarteaucitron.cdn,
             language = tarteaucitron.getLanguage(),
-            pathToLang = cdn + 'lang/tarteaucitron.' + language + '.js?v=' + tarteaucitron.version,
+            pathToLang = cdn + 'lang/tarteaucitron.' + language + '.min.js?v=' + tarteaucitron.version,
             pathToServices = cdn + 'tarteaucitron.services.min.js?v=' + tarteaucitron.version,
             linkElement = document.createElement('link'),
             defaults = {
