@@ -1,7 +1,7 @@
 .modal-open{
-    overflow: hidden;
-    height: 100%;
-}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                overflow: hidden;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                height: 100%;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            }
 
 #contentWrapper {display:unset;}
 
@@ -62,8 +62,8 @@ div#tarteaucitronServices {
 }
 
 #tarteaucitronServices::-webkit-scrollbar-thumb {
-  background-color: #ddd;
-  outline: 0px solid slategrey;
+    background-color: #ddd;
+    outline: 0px solid slategrey;
 }
 
 div#tarteaucitronServices {
@@ -118,9 +118,9 @@ div#tarteaucitronServices {
         text-align: center !important;
     }
 
-        #tarteaucitron #tarteaucitronServices .tarteaucitronLine .tarteaucitronAsk button {
-            margin-bottom: 5px;
-        }
+    #tarteaucitron #tarteaucitronServices .tarteaucitronLine .tarteaucitronAsk button {
+        margin-bottom: 5px;
+    }
 }
 
 @media screen and (min-width:768px) and (max-width:991px) {
@@ -181,7 +181,7 @@ div#tarteaucitronServices {
 }
 
 #tarteaucitron .tarteaucitronH1, #tarteaucitron .tarteaucitronH2, #tarteaucitron .tarteaucitronH3, #tarteaucitron .tarteaucitronH4, #tarteaucitron .tarteaucitronH5, #tarteaucitron .tarteaucitronH6 {
-  display: block;
+    display: block;
 }
 
 .cookie-list {
@@ -287,10 +287,10 @@ div#tarteaucitronServices {
 #tarteaucitron #tarteaucitronServices .tarteaucitronHidden {
     background: rgba(51, 51, 51, 0.07);
 }a.tarteaucitronSelfLink {
-    text-align: center!important;
-    display: block;
-    padding: 7px!important;
-}
+     text-align: center!important;
+     display: block;
+     padding: 7px!important;
+ }
 
 #tarteaucitron #tarteaucitronServices .tarteaucitronHidden {
     display: none;
@@ -302,9 +302,9 @@ div#tarteaucitronServices {
     box-sizing: border-box;
 }
 
-#tarteaucitronAlertSmall #tarteaucitronCookiesListContainer #tarteaucitronCookiesList .tarteaucitronTitle, 
-#tarteaucitron #tarteaucitronServices .tarteaucitronTitle button, 
-#tarteaucitron #tarteaucitronInfo, 
+#tarteaucitronAlertSmall #tarteaucitronCookiesListContainer #tarteaucitronCookiesList .tarteaucitronTitle,
+#tarteaucitron #tarteaucitronServices .tarteaucitronTitle button,
+#tarteaucitron #tarteaucitronInfo,
 #tarteaucitron #tarteaucitronServices .tarteaucitronDetails {
     color: #fff;
     display: inline-block;
@@ -731,12 +731,12 @@ div.amazon_product {
 .tarteaucitronIsAllowed .tarteaucitronDeny {
     opacity: 0.4!important;
 }.tarteaucitronIsDenied .tarteaucitronAllow {
-    opacity: 0.4!important;
-}.tarteaucitronIsAllowed .tarteaucitronAllow {
-    opacity: 1!important;
-}.tarteaucitronIsDenied .tarteaucitronDeny {
-    opacity: 1!important;
-}
+     opacity: 0.4!important;
+ }.tarteaucitronIsAllowed .tarteaucitronAllow {
+      opacity: 1!important;
+  }.tarteaucitronIsDenied .tarteaucitronDeny {
+       opacity: 1!important;
+   }
 .tarteaucitronLine .tarteaucitronAllow, .tarteaucitronLine .tarteaucitronDeny {
     opacity: 0.4;
 }
@@ -763,10 +763,29 @@ a.tarteaucitronSelfLink {
     text-shadow: 0 0 14px white;
     text-transform: uppercase;
 }.tarteaucitronMainLine .tarteaucitronH2 {
-    font-size: 1.2em!important;
-    margin-top: 4px!important;
-}
+     font-size: 1.2em!important;
+     margin-top: 4px!important;
+ }
 
 span.tarteaucitronTitle.tarteaucitronH3 {
     margin-top: 12px!important;
+}
+
+body #tarteaucitronRoot div#tarteaucitronAlertBig {
+    width: 60%;
+    min-width: 285px;
+    height: auto;
+    margin: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    box-shadow: 0 0 900px;
+    padding: 50px;
+}
+#tarteaucitronRoot span#tarteaucitronDisclaimerAlert {
+    margin-bottom: 50px;
+    display: block;
+    text-align: center;
+    font-size: 21px;
 }
