@@ -406,7 +406,7 @@ var tarteaucitron = {
                     html += '</div>';
                 }
 
-                tarteaucitron.addScript(tarteaucitron.cdn + 'advertising.js?v=' + tarteaucitron.version, '', function () {
+                tarteaucitron.addScript(tarteaucitron.cdn + 'advertising.min.js?v=' + tarteaucitron.version, '', function () {
                     if (tarteaucitronNoAdBlocker === true || tarteaucitron.parameters.adblocker === false) {
 
                         // create a wrapper container at the same level than tarteaucitron so we can add an aria-hidden when tarteaucitron is opened
