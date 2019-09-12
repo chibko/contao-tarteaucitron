@@ -22,9 +22,9 @@ class CookieCitron extends \Frontend
                 $flag = '|static';
             }
             if ($objLayout->bootstrap) {
-                $GLOBALS['TL_CSS_END'][] = $assetsDir . 'css/tarteaucitron.css|all' . $flag;
+                $GLOBALS['TL_CSS_END'][] = $assetsDir . 'css/tarteaucitron.min.css|all' . $flag;
             } else {
-                $GLOBALS['TL_CSS'][] = $assetsDir . 'css/tarteaucitron.css|all' . $flag;
+                $GLOBALS['TL_CSS'][] = $assetsDir . 'css/tarteaucitron.min.css|all' . $flag;
             }
 
             // Add the JS to the Head Section
