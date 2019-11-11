@@ -38,12 +38,12 @@ class CookieCitron extends \Frontend
             if ($objLayout->bootstrap) {
                 $GLOBALS['TL_CSS_END'][] = $assetsDir . 'css/tarteaucitron.min.css|all' . $flag;
                 if (isset($customCssPath)) {
-                    $GLOBALS['TL_CSS_END'][] = $assetsDir .$customCssPath. $flag;
+                    $GLOBALS['TL_CSS_END'][] = $customCssPath. $flag;
                 }
             } else {
                 $GLOBALS['TL_CSS'][] = $assetsDir . 'css/tarteaucitron.min.css|all' . $flag;
                 if (isset($customCssPath)) {
-                    $GLOBALS['TL_CSS'][] = $assetsDir . $customCssPath . $flag;
+                    $GLOBALS['TL_CSS'][] = $customCssPath . $flag;
                 }
             }
 
