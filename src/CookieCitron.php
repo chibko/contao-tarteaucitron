@@ -62,12 +62,15 @@ class CookieCitron extends \Frontend
             endif;
             $objTemplate->url_privacy = $urlPrivacy;
 
+            $GLOBALS['TL_HEAD'][]=$objTemplate->parse();
+
             // Place the cookiebar in DOM structure
-            if ($objRoot->cookiecitron_placement === 'before_wrapper') {
+            /*if ($objRoot->cookiecitron_placement === 'before_wrapper') {
                 $strContent = str_replace('<div id="wrapper">', $objTemplate->parse() . '<div id="wrapper">', $strContent);
             } else {
                 $strContent = str_replace('</body>', $objTemplate->parse() . '</body>', $strContent);
-            }
+            }*/
+
             // Add the services just before the </body> tag
             $arrServices = deserialize($objRoot->cookiecitron_services,true);$strServices=""; // Check if $arrServices is perfomed in the isCookieCitronEnabled function
             foreach ($arrServices as $service) :

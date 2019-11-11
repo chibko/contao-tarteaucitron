@@ -7,7 +7,7 @@ $GoogleAnalyticsId = 'UA-XXXXX-X';
  * DO NOT EDIT ANYTHING BELOW THIS LINE UNLESS YOU KNOW WHAT YOU ARE DOING!
  */
 if ($GoogleAnalyticsId != 'UA-XXXXX-X' && !BE_USER_LOGGED_IN && !$this->hasAuthenticatedBackendUser()): ?>
-    <script type="text/javascript">
+    <script>
         tarteaucitron.user.analyticsUa = '<?=$GoogleAnalyticsId?>';
         tarteaucitron.user.analyticsMore = function () {
             <?php if (Config::get('privacyAnonymizeGA')): ?>

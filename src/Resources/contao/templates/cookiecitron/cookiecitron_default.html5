@@ -1,4 +1,4 @@
-<script type="text/javascript">
+<script>
     var tarteaucitronForceLanguage = '<?php echo $this->language; ?>';
     tarteaucitron.init({
         <?php if ($this->url_privacy != "") :?>
