@@ -116,8 +116,8 @@ $GLOBALS['TL_DCA']['tl_page']['fields']['cookiecitron_position'] = array
     'sql' => "varchar(8) NOT NULL default ''"
 );
 
-$GLOBALS['TL_DCA']['tl_layout']['fields']['cookiecitron_custom_css'] = array(
-    'label'                   => &$GLOBALS['TL_LANG']['tl_layout']['cookiecitron_custom_css'],
+$GLOBALS['TL_DCA']['tl_page']['fields']['cookiecitron_custom_css'] = array(
+    'label'                   => &$GLOBALS['TL_LANG']['tl_page']['cookiecitron_custom_css'],
     'exclude'                 => true,
     'inputType'               => 'fileTree',
     'eval'                    => array('filesOnly'=>true, 'extensions'=>'css', 'fieldType'=>'radio', 'mandatory'=>false, 'tl_class'=>'w50'),
