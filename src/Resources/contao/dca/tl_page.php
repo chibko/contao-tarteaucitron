@@ -6,7 +6,7 @@ $arrServices = array('ga', 'gtag', 'gtag_multiple_ua', 'ga_universal', 'gtm');
 
 // Add palettes selector
 $GLOBALS['TL_DCA']['tl_page']['palettes']['__selector__'][] = 'cookiecitron_enable';
-$GLOBALS['TL_DCA']['tl_page']['subpalettes']['cookiecitron_enable'] = 'cookiecitron_url_privacy,cookiecitron_adblocker,cookiecitron_showAlertSmall,cookiecitron_cookieslist,cookiecitron_removeCredit,cookiecitron_position,cookiecitron_placement,cookiecitron_highPrivacy,cookiecitron_AcceptAllCta,cookiecitron_combineAssets,cookiecitron_services';
+$GLOBALS['TL_DCA']['tl_page']['subpalettes']['cookiecitron_enable'] = 'cookiecitron_url_privacy,cookiecitron_adblocker,cookiecitron_showAlertSmall,cookiecitron_cookieslist,cookiecitron_removeCredit,cookiecitron_position,cookiecitron_highPrivacy,cookiecitron_AcceptAllCta,cookiecitron_combineAssets,cookiecitron_services';
 
 PaletteManipulator::create()
     ->addLegend('cookiecitron_legend', '', PaletteManipulator::POSITION_AFTER)
@@ -116,7 +116,7 @@ $GLOBALS['TL_DCA']['tl_page']['fields']['cookiecitron_position'] = array
     'sql' => "varchar(8) NOT NULL default ''"
 );
 
-$GLOBALS['TL_DCA']['tl_page']['fields']['cookiecitron_placement'] = array
+/*$GLOBALS['TL_DCA']['tl_page']['fields']['cookiecitron_placement'] = array
 (
     'label' => &$GLOBALS['TL_LANG']['tl_page']['cookiecitron_placement'],
     'default' => 'body_end',
@@ -126,7 +126,7 @@ $GLOBALS['TL_DCA']['tl_page']['fields']['cookiecitron_placement'] = array
     'reference' => &$GLOBALS['TL_LANG']['tl_page']['cookiecitron_placement'],
     'eval' => array('tl_class' => 'w50'),
     'sql' => "varchar(16) NOT NULL default ''"
-);
+);*/
 
 
 $GLOBALS['TL_DCA']['tl_page']['fields']['cookiecitron_combineAssets'] = array
