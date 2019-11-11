@@ -2,13 +2,18 @@
 
 namespace Chibko\Contao\Tarteaucitron;
 
+use Contao\Cache;
+use Contao\FrontendTemplate;
 use MatthiasMullie\Minify\JS;
+use Contao\Template;
+use Contao\FilesModel;
+use Contao\PageModel;
 
 class CookieCitron extends \Frontend
 {
     /**
      * Add the cookie information scripts
-     * @param \PageModel $objPage, \layoutModel $objLayout, \PageRegular $objPageRegular
+     * @param PageModel $objPage, \layoutModel $objLayout, \PageRegular $objPageRegular
      */
     public function addCookieCitronScripts($objPage, $objLayout, $objPageRegular)
     {
@@ -21,14 +26,29 @@ class CookieCitron extends \Frontend
             if ($objRoot->cookiecitron_combineAssets) {
                 $flag = '|static';
             }
+
+            // Add the Custom CSS
+            if ($objRoot->cookiecitron_custom_css!==null) {
+                $customCssFile= FilesModel::findById($objRoot->cookiecitron_custom_css);
+                if ($customCssFile!==null) {
+                    $customCssPath=$customCssFile->path;
+                }
+            }
+
             if ($objLayout->bootstrap) {
                 $GLOBALS['TL_CSS_END'][] = $assetsDir . 'css/tarteaucitron.min.css|all' . $flag;
+                if (isset($customCssPath)) {
+                    $GLOBALS['TL_CSS_END'][] = $assetsDir .$customCssPath. $flag;
+                }
             } else {
                 $GLOBALS['TL_CSS'][] = $assetsDir . 'css/tarteaucitron.min.css|all' . $flag;
+                if (isset($customCssPath)) {
+                    $GLOBALS['TL_CSS'][] = $assetsDir . $customCssPath . $flag;
+                }
             }
 
             // Add the JS to the Head Section
-            $GLOBALS['TL_HEAD'][] = \Template::generateScriptTag($assetsDir.'tarteaucitron.min.js');
+            $GLOBALS['TL_HEAD'][] = Template::generateScriptTag($assetsDir.'tarteaucitron.min.js');
         }
     }
 
@@ -42,7 +62,7 @@ class CookieCitron extends \Frontend
 
         if ($this->isCookieCitronEnabled()) {
             $objRoot = $this->getCurrentRootPage();
-            $objTemplate = new \FrontendTemplate('cookiecitron_default');
+            $objTemplate = new FrontendTemplate('cookiecitron_default');
             $urlPrivacy = "";
 
             $objTemplate->highPrivacy = ($objRoot->cookiecitron_highPrivacy) ? 'true' : 'false';
@@ -55,7 +75,7 @@ class CookieCitron extends \Frontend
             $objTemplate->language = $objRoot->language;
 
             if (!empty($objRoot->cookiecitron_url_privacy)) :
-                $pagePrivacy = \PageModel::findWithDetails($objRoot->cookiecitron_url_privacy);
+                $pagePrivacy = PageModel::findWithDetails($objRoot->cookiecitron_url_privacy);
                 if ($pagePrivacy!==null) {
                     $urlPrivacy = $pagePrivacy->getFrontendUrl();
                 }
@@ -74,7 +94,7 @@ class CookieCitron extends \Frontend
             // Add the services just before the </body> tag
             $arrServices = deserialize($objRoot->cookiecitron_services,true);$strServices=""; // Check if $arrServices is perfomed in the isCookieCitronEnabled function
             foreach ($arrServices as $service) :
-                $serviceTemplate = new \FrontendTemplate($service);
+                $serviceTemplate = new FrontendTemplate($service);
                 $strServices.="\n".$serviceTemplate->parse();
             endforeach;
             $strContent = str_replace('</body>', $strServices . '</body>', $strContent);
@@ -85,10 +105,10 @@ class CookieCitron extends \Frontend
 
     /**
      * Check whether the cookiebar is enabled and should be displayed
-     * @param \PageModel $rootPage
+     * @param PageModel $rootPage
      * @return boolean
      */
-    protected function isCookieCitronEnabled(\PageModel $rootPage = null)
+    protected function isCookieCitronEnabled(PageModel $rootPage = null)
     {
         global $objPage;
         $objRoot = ($rootPage !== null) ? $rootPage : $this->getCurrentRootPage();
@@ -112,10 +132,10 @@ class CookieCitron extends \Frontend
         global $objPage;
         $strKey = 'COOKIECITRON_ROOT_' . $objPage->rootId;
 
-        if (!\Cache::has($strKey)) {
-            \Cache::set($strKey, \PageModel::findByPk($objPage->rootId));
+        if (!Cache::has($strKey)) {
+            Cache::set($strKey, PageModel::findByPk($objPage->rootId));
         }
 
-        return \Cache::get($strKey);
+        return Cache::get($strKey);
     }
 }
