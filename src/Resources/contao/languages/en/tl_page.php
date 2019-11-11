@@ -27,6 +27,7 @@ $GLOBALS['TL_LANG']['tl_page']['cookiecitron_legend'] = 'Cookie information';
  */
 $GLOBALS['TL_LANG']['tl_page']['cookiecitron_position']['top'] = 'Top of the page';
 $GLOBALS['TL_LANG']['tl_page']['cookiecitron_position']['bottom'] = 'Bottom of the page';
+$GLOBALS['TL_LANG']['tl_page']['cookiecitron_position']['middle'] = 'Middle of the page';
 $GLOBALS['TL_LANG']['tl_page']['cookiecitron_placement']['before_wrapper'] = 'Before the #wrapper';
 $GLOBALS['TL_LANG']['tl_page']['cookiecitron_placement']['body_end'] = 'Before &lt;body&gt; end';
 

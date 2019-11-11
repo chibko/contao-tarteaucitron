@@ -27,6 +27,7 @@ $GLOBALS['TL_LANG']['tl_page']['cookiecitron_legend'] = 'Confidentialité / Cook
  */
 $GLOBALS['TL_LANG']['tl_page']['cookiecitron_position']['top'] = 'Haut de page';
 $GLOBALS['TL_LANG']['tl_page']['cookiecitron_position']['bottom'] = 'Bas de page';
+$GLOBALS['TL_LANG']['tl_page']['cookiecitron_position']['middle'] = 'Milieu de page';
 $GLOBALS['TL_LANG']['tl_page']['cookiecitron_placement']['before_wrapper'] = 'Avant la balise #wrapper';
 $GLOBALS['TL_LANG']['tl_page']['cookiecitron_placement']['body_end'] = 'Avant la balise de fin &lt;body&gt;';
 
