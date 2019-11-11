@@ -263,7 +263,7 @@ var tarteaucitron = {
 
 
                 // css for new middle bar
-                if (tarteaucitron.orientation === 'middle') {
+                /*if (tarteaucitron.orientation === 'middle') {
                     var customThemeMiddle = document.createElement('style'),
                         cssRuleMiddle = 'div#tarteaucitronAlertBig:before {content: \'' + tarteaucitron.lang.middleBarHead + '\';font-size: 50px;}body #tarteaucitronRoot div#tarteaucitronAlertBig {width: 60%;min-width: 285px;height: auto;margin: auto;left: 50%;top: 50%;transform: translate(-50%, -50%);box-shadow: 0 0 9000px #000;border-radius: 20px;padding: 50px 0;}span#tarteaucitronDisclaimerAlert {padding: 0 30px;}#tarteaucitronRoot span#tarteaucitronDisclaimerAlert {margin: 50px 0;display: block;text-align: center;font-size: 21px;}';
 
@@ -274,7 +274,7 @@ var tarteaucitron = {
                         customThemeMiddle.appendChild(document.createTextNode(cssRuleMiddle));
                     }
                     document.getElementsByTagName('head')[0].appendChild(customThemeMiddle);
-                }
+                }*/
 
                 var body = document.body,
                     div = document.createElement('div'),
