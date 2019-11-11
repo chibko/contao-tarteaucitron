@@ -110,7 +110,7 @@ $GLOBALS['TL_DCA']['tl_page']['fields']['cookiecitron_position'] = array
     'default' => 'top',
     'exclude' => true,
     'inputType' => 'select',
-    'options' => array('top', 'bottom'),
+    'options' => array('top', 'middle', 'bottom'),
     'reference' => &$GLOBALS['TL_LANG']['tl_page']['cookiecitron_position'],
     'eval' => array('tl_class' => 'w50'),
     'sql' => "varchar(8) NOT NULL default ''"
