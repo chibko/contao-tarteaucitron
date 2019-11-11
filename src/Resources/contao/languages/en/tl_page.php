@@ -13,9 +13,9 @@ $GLOBALS['TL_LANG']['tl_page']['cookiecitron_cookieslist'] = ['List of installed
 $GLOBALS['TL_LANG']['tl_page']['cookiecitron_removeCredit'] = ['Remove credits','Check this box to remove the link to the tarteaucitron.js website'];
 $GLOBALS['TL_LANG']['tl_page']['cookiecitron_showAlertSmall'] = ['Bottom banner','Check this box to display the small banner at the bottom right'];
 $GLOBALS['TL_LANG']['tl_page']['cookiecitron_position'] = ['Bar position', 'Here you can choose the bar position.'];
-$GLOBALS['TL_LANG']['tl_page']['cookiecitron_placement'] = ['Bar placement in DOM','Here you can choose the bar placement in DOM structure.'];
 $GLOBALS['TL_LANG']['tl_page']['cookiecitron_combineAssets'] = ['Combine assets','Adds the cookiebar CSS and JS assets to the combined file.'];
 $GLOBALS['TL_LANG']['tl_page']['cookiecitron_services']=['Services', 'Choose services'];
+$GLOBALS['TL_LANG']['tl_page']['cookiecitron_custom_css']=['Custom CSS', 'Add a custom CSS'];
 
 /**
  * Legends

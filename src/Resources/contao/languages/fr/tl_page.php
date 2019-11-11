@@ -13,9 +13,9 @@ $GLOBALS['TL_LANG']['tl_page']['cookiecitron_cookieslist'] = ['Liste des cookies
 $GLOBALS['TL_LANG']['tl_page']['cookiecitron_removeCredit'] = ['Supprimer crédits','Cochez cette case pour supprimer le lien vers le site tarte au citron'];
 $GLOBALS['TL_LANG']['tl_page']['cookiecitron_showAlertSmall'] = ['Bandeau bas','Cochez cette case pour afficher le petit bandeau en bas à droite'];
 $GLOBALS['TL_LANG']['tl_page']['cookiecitron_position'] = ['Position de la barre', 'Choisissez où afficher la barre : Haut ou bas'];
-$GLOBALS['TL_LANG']['tl_page']['cookiecitron_placement'] = ['Placement du code dans le DOM','Choisissez le placement du code dans la structure du DOM.'];
 $GLOBALS['TL_LANG']['tl_page']['cookiecitron_combineAssets'] = ['Combiner les CSS','Combine et compresse la feuille de style tarteaucitron.css avec les autres CSS.'];
 $GLOBALS['TL_LANG']['tl_page']['cookiecitron_services']=['Services', 'Choisir les services'];
+$GLOBALS['TL_LANG']['tl_page']['cookiecitron_custom_css']=['CSS personnalisée', 'Ajoute une css personnalisée'];
 
 /**
  * Legends
