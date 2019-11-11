@@ -6,7 +6,7 @@ $arrServices = array('ga', 'gtag', 'gtag_multiple_ua', 'ga_universal', 'gtm');
 
 // Add palettes selector
 $GLOBALS['TL_DCA']['tl_page']['palettes']['__selector__'][] = 'cookiecitron_enable';
-$GLOBALS['TL_DCA']['tl_page']['subpalettes']['cookiecitron_enable'] = 'cookiecitron_url_privacy,cookiecitron_adblocker,cookiecitron_showAlertSmall,cookiecitron_cookieslist,cookiecitron_removeCredit,cookiecitron_position,cookiecitron_highPrivacy,cookiecitron_AcceptAllCta,cookiecitron_combineAssets,cookiecitron_custom_css,cookiecitron_services';
+$GLOBALS['TL_DCA']['tl_page']['subpalettes']['cookiecitron_enable'] = 'cookiecitron_url_privacy,cookiecitron_position,cookiecitron_adblocker,cookiecitron_showAlertSmall,cookiecitron_cookieslist,cookiecitron_removeCredit,cookiecitron_highPrivacy,cookiecitron_AcceptAllCta,cookiecitron_custom_css,cookiecitron_combineAssets,cookiecitron_services';
 
 PaletteManipulator::create()
     ->addLegend('cookiecitron_legend', '', PaletteManipulator::POSITION_AFTER)
@@ -41,7 +41,7 @@ $GLOBALS['TL_DCA']['tl_page']['fields']['cookiecitron_url_privacy'] = array
     'exclude' => true,
     'inputType' => 'pageTree',
     'foreignKey' => 'tl_page.title',
-    'eval' => array('fieldType' => 'radio'), // do not set mandatory (see #5453)
+    'eval' => array('fieldType' => 'radio', 'tl_class' => 'w50'),
     'save_callback' => array
     (
         array('tl_page', 'checkJumpTo')
@@ -73,7 +73,7 @@ $GLOBALS['TL_DCA']['tl_page']['fields']['cookiecitron_adblocker'] = array
     'label' => &$GLOBALS['TL_LANG']['tl_page']['cookiecitron_adblocker'],
     'exclude' => true,
     'inputType' => 'checkbox',
-    'eval' => array('tl_class' => 'w50'),
+    'eval' => array('tl_class' => 'w50 clr'),
     'sql' => "char(1) NOT NULL default ''"
 );
 
@@ -124,25 +124,12 @@ $GLOBALS['TL_DCA']['tl_page']['fields']['cookiecitron_custom_css'] = array(
     'sql'                     => "binary(16) NULL"
 );
 
-/*$GLOBALS['TL_DCA']['tl_page']['fields']['cookiecitron_placement'] = array
-(
-    'label' => &$GLOBALS['TL_LANG']['tl_page']['cookiecitron_placement'],
-    'default' => 'body_end',
-    'exclude' => true,
-    'inputType' => 'select',
-    'options' => array('body_end', 'before_wrapper'),
-    'reference' => &$GLOBALS['TL_LANG']['tl_page']['cookiecitron_placement'],
-    'eval' => array('tl_class' => 'w50'),
-    'sql' => "varchar(16) NOT NULL default ''"
-);*/
-
-
 $GLOBALS['TL_DCA']['tl_page']['fields']['cookiecitron_combineAssets'] = array
 (
     'label' => &$GLOBALS['TL_LANG']['tl_page']['cookiecitron_combineAssets'],
     'exclude' => true,
     'inputType' => 'checkbox',
-    'eval' => array('tl_class' => 'long clr'),
+    'eval' => array('tl_class' => 'w50'),
     'sql' => "char(1) NOT NULL default ''"
 );
 
@@ -153,6 +140,6 @@ $GLOBALS['TL_DCA']['tl_page']['fields']['cookiecitron_services'] = array
     'inputType' => 'checkboxWizard',
     'options' => $arrServices,
     'reference' => &$GLOBALS['TL_LANG']['tl_page']['cookiecitron_services'],
-    'eval' => array('multiple' => true, 'helpwizard' => true),
+    'eval' => array('multiple' => true, 'helpwizard' => true, 'tl_class'=>'clr'),
     'sql' => "text NULL"
 );
