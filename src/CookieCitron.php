@@ -60,7 +60,7 @@ class CookieCitron extends \Frontend
     public function addCookieCitronBuffer($strContent,$strTemplate)
     {
 
-        if ($this->isCookieCitronEnabled()) {
+        if ($this->isCookieCitronEnabled() && strstr($strTemplate, 'fe_page')) {
             $objRoot = $this->getCurrentRootPage();
             $objTemplate = new FrontendTemplate('cookiecitron_default');
             $urlPrivacy = "";
