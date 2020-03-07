@@ -1,6 +1,6 @@
 <?php
 
-namespace Chibko\Contao\Tarteaucitron;
+namespace Chibko\Tarteaucitron;
 
 use Contao\Cache;
 use Contao\FrontendTemplate;
@@ -20,7 +20,7 @@ class CookieCitron extends \Frontend
         if ($this->isCookieCitronEnabled()) {
             $objRoot = $this->getCurrentRootPage();
             $flag = '';
-            $assetsDir = 'bundles/chibkocontaotarteaucitron/';
+            $assetsDir = 'bundles/chibkotarteaucitron/';
 
             // Add the CSS
             if ($objRoot->cookiecitron_combineAssets) {
