@@ -4,19 +4,29 @@ use \Contao\CoreBundle\DataContainer\PaletteManipulator;
 
 $arrServices = array('ga', 'gtag', 'gtag_multiple_ua', 'ga_universal', 'gtm');
 
+/*
+PaletteManipulator::create()
+    ->addLegend('cookiecitron_legend', 'cache_legend', PaletteManipulator::POSITION_AFTER)
+    ->addField('cookiecitron_enable', 'cookiecitron_legend', PaletteManipulator::POSITION_AFTER)
+    ->applyToPalette('root', 'tl_page');
+PaletteManipulator::create()
+    ->addLegend('cookiecitron_legend', 'cache_legend', PaletteManipulator::POSITION_AFTER)
+    ->addField('cookiecitron_enable', 'cookiecitron_legend', PaletteManipulator::POSITION_AFTER)
+    ->applyToPalette('rootfallback', 'tl_page');
+
+PaletteManipulator::create()
+    ->addLegend('cookiecitron_legend', 'cache_legend', PaletteManipulator::POSITION_AFTER)
+    ->addField('cookiecitron_remove', 'cookiecitron_legend', PaletteManipulator::POSITION_AFTER)
+    ->applyToPalette('regular', 'tl_page');
+*/
+
+$GLOBALS['TL_DCA']['tl_page']['palettes']['root'].=";{cookiecitron_legend},cookiecitron_enable";
+$GLOBALS['TL_DCA']['tl_page']['palettes']['rootfallback'].=";{cookiecitron_legend},cookiecitron_enable";
+$GLOBALS['TL_DCA']['tl_page']['palettes']['regular'].=";{cookiecitron_legend},cookiecitron_remove";
+
 // Add palettes selector
 $GLOBALS['TL_DCA']['tl_page']['palettes']['__selector__'][] = 'cookiecitron_enable';
 $GLOBALS['TL_DCA']['tl_page']['subpalettes']['cookiecitron_enable'] = 'cookiecitron_url_privacy,cookiecitron_position,cookiecitron_adblocker,cookiecitron_showAlertSmall,cookiecitron_cookieslist,cookiecitron_removeCredit,cookiecitron_highPrivacy,cookiecitron_AcceptAllCta,cookiecitron_custom_css,cookiecitron_combineAssets,cookiecitron_services';
-
-PaletteManipulator::create()
-    ->addLegend('cookiecitron_legend', '', PaletteManipulator::POSITION_AFTER)
-    ->addField('cookiecitron_enable', 'cookiecitron_legend', PaletteManipulator::POSITION_AFTER)
-    ->applyToPalette('root', 'tl_page');
-
-PaletteManipulator::create()
-    ->addLegend('cookiecitron_legend', '', PaletteManipulator::POSITION_AFTER)
-    ->addField('cookiecitron_remove', 'cookiecitron_legend', PaletteManipulator::POSITION_AFTER)
-    ->applyToPalette('regular', 'tl_page');
 
 $GLOBALS['TL_DCA']['tl_page']['fields']['cookiecitron_enable'] = array
 (
