@@ -23,10 +23,10 @@
     },
     "autoload": {
         "psr-4": {
-            "Chibko\\Contao\\Tarteaucitron\\": "src/"
+            "Chibko\\Tarteaucitron\\": "src/"
         }
     },
     "extra": {
-        "contao-manager-plugin": "Chibko\\Contao\\Tarteaucitron\\ContaoManager\\Plugin"
+        "contao-manager-plugin": "Chibko\\Tarteaucitron\\ContaoManager\\Plugin"
     }
 }
