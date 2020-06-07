@@ -2,8 +2,6 @@
 
 use \Contao\CoreBundle\DataContainer\PaletteManipulator;
 
-$arrServices = array('ga', 'gtag', 'gtag_multiple_ua', 'ga_universal', 'gtm');
-
 /*
 PaletteManipulator::create()
     ->addLegend('cookiecitron_legend', 'cache_legend', PaletteManipulator::POSITION_AFTER)
@@ -147,9 +145,11 @@ $GLOBALS['TL_DCA']['tl_page']['fields']['cookiecitron_services'] = array
 (
     'label' => &$GLOBALS['TL_LANG']['tl_page']['cookiecitron_services'],
     'exclude' => true,
-    'inputType' => 'checkboxWizard',
-    'options' => $arrServices,
-    'reference' => &$GLOBALS['TL_LANG']['tl_page']['cookiecitron_services'],
-    'eval' => array('multiple' => true, 'helpwizard' => true, 'tl_class'=>'clr'),
+    'inputType' => 'radio',
+    'options_callback' => static function ()
+    {
+        return Contao\Controller::getTemplateGroup('cc_');
+    },
+    'eval' => array('tl_class'=>'clr'),
     'sql' => "text NULL"
 );

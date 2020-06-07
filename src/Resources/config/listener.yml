@@ -1,0 +1,7 @@
+services:
+  Chibko\Tarteaucitron\EventListener\GeneratePageListener:
+    tags: ['terminal42_service_annotation']
+  Chibko\Tarteaucitron\EventListener\OutputFrontendTemplateListener:
+    tags: ['terminal42_service_annotation']
+  Chibko\Tarteaucitron\EventListener\DataContainer\PageGlobalCallbacksListener:
+    tags: ['terminal42_service_annotation']
